@@ -3,7 +3,6 @@
 {
   imports = [
    ./apps 
-   ./theme
    ./envs.nix
    ./theme.nix
    inputs.nix-colors.homeManagerModules.default
@@ -27,13 +26,14 @@
         kitty
         starship
         vscode
-
-        (import ./apps/hyprland/startscript.nix {inherit pkgs;})
+        btop
+        eza
     ];
 
   # Let Home Manager install and manage itself.
   
   };
   
+  programs.fish.shellAliases = { ls = "eza -alh"; lst = "eza --tree";};
   programs.home-manager.enable = true;
 }

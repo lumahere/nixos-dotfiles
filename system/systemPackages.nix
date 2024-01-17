@@ -10,7 +10,12 @@
     mako 
     killall
     libnotify
+    wlogout
 
+    xdg-desktop-portal 
+    xdg-desktop-portal-hyprland
+
+    (import ./starting.nix {inherit pkgs;})
     
   ];
 
@@ -20,6 +25,7 @@
   programs = {
     hyprland.enable = true;
     fish = {enable = true; shellInit = ''starship init fish | source''; };
+    fish.shellAliases = { ls = "eza -alh"; lst = "eza --tree";};
   };
 
   xdg.portal.enable = true;

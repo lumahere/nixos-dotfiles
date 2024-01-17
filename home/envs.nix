@@ -18,10 +18,10 @@
         XDG_SESSION_TYPE = "wayland";
 
         XCURSOR_SIZE = "24";
-        QT_QPA_PLATFORMTHEME = "qt5ct" # change to qt6ct if you have that
+        # QT_QPA_PLATFORMTHEME = "qt5ct"; # change to qt6ct if you have that
 
 
 
     };
-    }
+    };
 }
