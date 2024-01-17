@@ -3,6 +3,9 @@
 {
   imports = [
    ./apps 
+   ./theme
+   ./envs.nix
+   ./theme.nix
    inputs.nix-colors.homeManagerModules.default
   ];
   colorScheme = nix-colors.colorSchemes.tokyo-night-terminal-dark;
@@ -10,7 +13,6 @@
     username = "nocta";
     homeDirectory = "/home/nocta";
 
-    
     stateVersion = "23.11"; # Please read the comment before changing.
 
   

@@ -6,7 +6,6 @@ pkgs.writeShellScriptBin "hyprland_env-start" ''
     ${pkgs.xdg-desktop-portal-hyprland} & sleep 4
     ${pkgs.xdg-desktop-portal}
 
-    ${pkgs.swww} init 
-    ${pkgs.swww} img home/nocta/.wall/primary.jpg
+    
 
 ''
