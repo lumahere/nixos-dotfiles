@@ -25,6 +25,8 @@
         kitty
         starship
         vscode
+
+        (import ./apps/hyprland/startscript.nix {inherit pkgs;})
     ];
 
   # Let Home Manager install and manage itself.
