@@ -5,10 +5,10 @@
     confirm_os_window_close = 0;
 
          #Font config
-        # font_family  =      "jetbrains mono nerd font";
-        # bold_font    =      "jetbrains mono nerd font";
-        # italic_font  =      "jetbrains mono nerd font";
-        # bold_italic_font =  "jetbrains mono nerd font";
+        font_family  =      "jetbrains mono nerd font";
+        bold_font    =      "jetbrains mono nerd font";
+        italic_font  =      "jetbrains mono nerd font";
+        bold_italic_font =  "jetbrains mono nerd font";
 
         window_padding_width = 10;
         font_size = 14;

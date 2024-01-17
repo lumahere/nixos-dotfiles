@@ -5,7 +5,12 @@
     libsForQt5.qt5.qtquickcontrols2
 
   ];
-  programs.hyprland.enable = true;
-  programs.fish.enable = true;
-  programs.fish.shellInit = ''starship init fish | source'';
+
+  fonts.packages = with pkgs; [
+  (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+];
+  programs = {
+    hyprland.enable = true;
+    fish = {enable = true; shellInit = ''starship init fish | source''; }
+  };
 }
