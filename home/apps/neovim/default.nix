@@ -4,6 +4,7 @@
     ./plugins.nix
     ./extraplug.nix
     ./keymaps.nix
+    ./cmp.nix
   ];
   programs.nixvim = {
     enable = true;

@@ -21,6 +21,7 @@
         kitty
         wofi
         swww
+	gh
         git
         kitty
         starship

@@ -8,6 +8,7 @@
 	  telescope.enable = true;
 	  treesitter.enable = true;
 	  luasnip.enable = true;
+	  nvim-cmp.enable = true;
     	};
 
     plugins.lsp = {
