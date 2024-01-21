@@ -26,6 +26,7 @@
     hyprland.enable = true;
     fish = {enable = true; shellInit = ''starship init fish | source''; };
     fish.shellAliases = { ls = "eza -alh"; lst = "eza --tree";};
+    thunar = {enable = true; plugins = with pkgs.xfce; [thunar-archive-plugin thunar-volman]; };
   };
 
   xdg.portal.enable = true;

@@ -1,4 +1,4 @@
-{ config, pkgs, nix-colors, inputs, ... }:
+{ config, pkgs, nix-colors, inputs, nixvim, ... }:
 
 {
   imports = [
@@ -6,6 +6,7 @@
    ./envs.nix
    ./theme.nix
    inputs.nix-colors.homeManagerModules.default
+   nixvim.homeManagerModules.nixvim
   ];
   colorScheme = nix-colors.colorSchemes.tokyo-night-terminal-dark;
   home = {
@@ -16,11 +17,9 @@
 
   
     packages = with pkgs; [
-        neovim
         firefox
         kitty
         wofi
-        dolphin
         swww
         git
         kitty
@@ -28,12 +27,14 @@
         vscode
         btop
         eza
+	rustup
     ];
 
   # Let Home Manager install and manage itself.
   
   };
   
-  programs.fish.shellAliases = { ls = "eza -alh"; lst = "eza --tree";};
+
+
   programs.home-manager.enable = true;
 }
