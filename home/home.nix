@@ -34,6 +34,11 @@
 	image-roll
 	mako
 	vlc
+	networkmanagerapplet
+	pavucontrol
+	pamixer
+	blueman
+	bluez
 ];
 
   # Let Home Manager install and manage itself.

@@ -21,8 +21,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # NVIDIA
-
+  # BLUETOOTH
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -56,6 +58,7 @@
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -95,7 +98,13 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  
+  systemd.user.services.mpris-proxy = {
+    description = "Mpris proxy";
+    after = [ "network.target" "sound.target" ];
+    wantedBy = [ "default.target" ];
+    serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
+};
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "23.11"; # Did you read the comment?
