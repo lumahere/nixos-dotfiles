@@ -9,6 +9,11 @@
 	    key = "<c-s>";
 	    action = "<cmd>w<CR>";
 	}
+	{
+	    key = "<c-q>";
+	    action = "<cmd>q<CR>";
+	}
+
    ];
 
    programs.nixvim.plugins.lsp.onAttach = ''

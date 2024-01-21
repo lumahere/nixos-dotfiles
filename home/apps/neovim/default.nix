@@ -14,7 +14,7 @@
 	relativenumber = true;
 	shiftwidth = 4;
 	clipboard = "unnamedplus";
-	
+	autoindent = true;	
     };
     globals.mapleader = " ";
     globals.maplocalleader = " ";

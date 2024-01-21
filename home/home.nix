@@ -29,7 +29,12 @@
         btop
         eza
 	rustup
-    ];
+	libsForQt5.ark
+	imagemagick
+	image-roll
+	mako
+	vlc
+];
 
   # Let Home Manager install and manage itself.
   

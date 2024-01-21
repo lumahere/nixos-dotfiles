@@ -15,12 +15,16 @@
     xdg-desktop-portal 
     xdg-desktop-portal-hyprland
 
+    xfce.tumbler
+    ffmpeg-full
+    ffmpegthumbnailer
     (import ./starting.nix {inherit pkgs;})
     
   ];
 
   fonts.packages = with pkgs; [
-  (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    font-awesome
 ];
   programs = {
     hyprland.enable = true;
