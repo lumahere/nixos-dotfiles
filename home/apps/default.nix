@@ -6,5 +6,6 @@
         ./neovim
         ./waybar
 	./mako
+	./wlogout
     ];
 }
