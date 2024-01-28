@@ -15,7 +15,8 @@
 
 	    "custom/launcher" = {
 		format = " ";
-		on-click = "wofi --show drun --allow-images"; 
+		on-click = "wofi --show drun --allow-images";
+		"on-click-right" = "wlogout";
 	    };
 	"clock" = {
 	    "tooltip-format" =  "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";

@@ -3,50 +3,55 @@ let
     opcaity = "DE"; # Hacky Hex for rgba(x,y,z,)
 in
 {
-  programs.wlogout.style = with config.colorScheme.colors ''
+  programs.wlogout.style = with config.colorScheme.colors; ''
     * {
 	    background-image: none;
     }
     window {
-	    background-color: #${base03}DE;
+	    background-color: transparent;
     }
     button {
 	color: #FFFFFF;
-	    /* background-color: #1E1E1E; */
+	    background-color: transparent;
 	    border-style: solid;
 	    border-width: 2px;
 	    background-repeat: no-repeat;
 	    background-position: center;
 	    background-size: 25%;
+	    transition: all 0.2s cubic-bezier(.55,-0.68,.48,1.682);
+    	    animation: gradient_f 10s ease-in infinite;
+
     }
 
     button:focus, button:active, button:hover {
-	    background-color: #${base0C};
+	    background-color: #${base0D};
+	    background-size: 20%;
 	    outline-style: none;
     }
 
     #lock {
-	background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+	background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/lock.png"));
     }
 
     #logout {
-	background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/logout.png"));
     }
 
     #suspend {
-	background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+	background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/suspend.png"));
     }
 
     #hibernate {
-	background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+	background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/hibernate.png"));
+
     }
 
     #shutdown {
-	background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+	background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/shutdown.png"));
     }
 
     #reboot {
-	background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+	background-image: image(url("${pkgs.wlogout}/share/wlogout/icons/reboot.png"));
     }
 
   ''; 
