@@ -19,7 +19,7 @@
 
         XCURSOR_SIZE = "24";
         # QT_QPA_PLATFORMTHEME = "qt5ct"; # change to qt6ct if you have that
-	NIXOS_GLOBAL_CONFIG = "/home/nocta/Nixconfig"
+	NIXOS_GLOBAL_CONFIG = "/home/nocta/Nixconfig";
 
 
     };

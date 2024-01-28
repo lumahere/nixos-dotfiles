@@ -8,5 +8,5 @@
 	borderSize = 2;
 	textColor = "#FFFFFF";
 	layer = "overlay";
-    }
+    };
 }
