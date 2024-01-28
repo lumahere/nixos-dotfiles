@@ -5,5 +5,6 @@
         ./kitty
         ./neovim
         ./waybar
+	./mako
     ];
 }

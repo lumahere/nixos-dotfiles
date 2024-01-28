@@ -39,6 +39,8 @@
 	pamixer
 	blueman
 	bluez
+	spotify
+	spotify-tray
 ];
 
   # Let Home Manager install and manage itself.

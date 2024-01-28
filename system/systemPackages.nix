@@ -18,7 +18,6 @@
     xfce.tumbler
     ffmpeg-full
     ffmpegthumbnailer
-    (import ./starting.nix {inherit pkgs;})
     
   ];
 

@@ -3,7 +3,7 @@
 programs.nixvim = {
     plugins.nvim-cmp.completion.autocomplete = [ "TextChanged" ];
     plugins.nvim-cmp.snippet.expand = "luasnip";
-    plugins.nvim-cmp.sources = [{name = "nvim_lsp"; }{ name = "luasnip"; }{ name = "path"; }{ name = "buffer"; }];
+    plugins.nvim-cmp.sources = [{name = "nvim_lsp"; }{ name = "luasnip"; }{ name = "path";}{ name = "buffer"; }];
     plugins.nvim-cmp.mapping = {
 	"<C-Space>" = "cmp.mapping.complete()";
 	"<C-d>" = "cmp.mapping.scroll_docs(-4)";
