@@ -27,7 +27,7 @@
              home-manager.nixosModules.home-manager {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.nocta = import ./home/home.nix;
+              home-manager.users.luma = import ./home/home.nix;
               home-manager.extraSpecialArgs = {inherit inputs; inherit nix-colors; inherit nixvim;};
              }
           ];

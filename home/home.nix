@@ -10,8 +10,8 @@
   ];
   colorScheme = nix-colors.colorSchemes.tokyo-night-terminal-dark;
   home = {
-    username = "nocta";
-    homeDirectory = "/home/nocta";
+    username = "luma";
+    homeDirectory = "/home/luma";
 
     stateVersion = "23.11"; # Please read the comment before changing.
 

@@ -10,6 +10,7 @@
 	./hardware-configuration.nix
 	    ./systemPackages.nix
 	    ./SDDM
+	    .
 	];
 
 # Bootloader.
@@ -67,7 +68,7 @@
 	pulse.enable = true;
     };
 
-    users.users.nocta = {
+    users.users.luma = {
 	isNormalUser = true;
 	description = "Nocta";
 	extraGroups = [ "networkmanager" "wheel" ];

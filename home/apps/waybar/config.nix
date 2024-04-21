@@ -7,7 +7,7 @@
             height = 40;    
             modules-left = [ "custom/launcher" "cpu" "memory" ];    
             modules-center = [ "hyprland/workspaces" ];    
-            modules-right = ["clock" "tray"];    
+            modules-right = ["clock" "pulseaudio" "tray"];    
             "hyprland/workspaces" = {      
                 disable-scroll = true;      
                 all-outputs = true;    
@@ -24,18 +24,33 @@
 	};
 	"tray"=  {
 	    "icon-size"= 16;
-	    "spacing" = 0;
+	    "spacing" = 10;
 	};
 	"cpu"= {
 	    "interval" = 15;
 	    "format" = "  {}%";
 	    "max-length" = 10;
-    };
+	};
 	"memory" = {
 	    "interval" = 10;
 	    "format" = "  {}%";
 	    "max-length" = 10;
 	};
+	"pulseaudio" = {
+	    tooltip = true;
+	    scroll-step = 5;
+	    format = "{icon}  {volume}%";
+	    format-muted = "{icon}  {volume}%";
+	    on-click = "pamixer -t";
+	    on-click-right = "pavucontrol";
+	    format-icons = {
+		headphone = "󰋋";
+		default =  ["󰝟" "" ""];
+
+	    };
+
+	};
+	
 #            "custom/hello-from-waybar" = {      
 #               format = "hello {}";      
 #               max-length = 40;      
