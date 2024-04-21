@@ -10,7 +10,7 @@
 	./hardware-configuration.nix
 	    ./systemPackages.nix
 	    ./SDDM
-	    .
+	   ./vars.nix 
 	];
 
 # Bootloader.

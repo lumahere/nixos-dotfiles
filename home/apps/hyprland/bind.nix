@@ -2,6 +2,11 @@
 {
 wayland.windowManager.hyprland.settings = {
 	"$mainMod" = "SUPER";
+	"$terminal" = "kitty";
+	"$fileManager" = "thunar";
+	"$menu" = "wofi --show drun --allow-images";
+	"$browser" = "firefox";
+
 	bind = [
 		"bind = $mainMod, T, exec, $terminal"
 		"bind = $mainMod, Q, killactive"
@@ -19,7 +24,7 @@ wayland.windowManager.hyprland.settings = {
 		"bind = $mainMod, up, movefocus, u"
 		"bind = $mainMod, down, movefocus, d"
 		"bind = $mainMod, ESCAPE, exec, wlogout"
-		"bind = $mainMod SHFIT, ESCAPE, exec, btop"
+		"bind = $mainMod SHIFT, ESCAPE, exec, btop"
 		"bind = $mainMod, F, fullscreen"
 
 	] ++ (
@@ -30,17 +35,17 @@ wayland.windowManager.hyprland.settings = {
 			    in
 			    builtins.toString (x + 1 - (c * 10));
 				in [
-				    "$mod, ${ws}, workspace, ${toString (x + 1)}"
-				    "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+				    "$mainMod, ${ws}, workspace, ${toString (x + 1)}"
+				    "$mainMod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
 				    ]
 				)
 			    10)
 	     );
 	bindm = [
     # mouse movements
-	"$mod, mouse:272, movewindow"
-	"$mod, mouse:273, resizewindow"
-	"$mod ALT, mouse:272, resizewindow"
+	"$mainMod, mouse:272, movewindow"
+	"$mainMod, mouse:273, resizewindow"
+	"$mainMod ALT, mouse:272, resizewindow"
 	    ];
 	
     };
