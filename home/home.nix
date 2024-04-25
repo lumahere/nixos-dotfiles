@@ -5,6 +5,7 @@
    ./apps 
    ./envs.nix
    ./theme.nix
+   ./custom_apps.nix
    inputs.nix-colors.homeManagerModules.default
    nixvim.homeManagerModules.nixvim
   ];
@@ -21,14 +22,12 @@
         kitty
         wofi
         swww
-	gh
         git
         kitty
         starship
         vscode
         btop
         eza
-	rustup
 	libsForQt5.ark
 	imagemagick
 	image-roll
@@ -39,8 +38,6 @@
 	pamixer
 	blueman
 	bluez
-	spotify
-	spotify-tray
 ];
 
   # Let Home Manager install and manage itself.
