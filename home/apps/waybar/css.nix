@@ -1,6 +1,7 @@
 {pkgs, config, ...}:
 let
     white = "FFFFFF";
+    bar = config.colorScheme.colors.base03;
     bg = config.colorScheme.colors.base00;
 in
 {
@@ -16,15 +17,19 @@ in
 	margin-top: 0px;
 	    /* background-color: transparent; */
 	    padding-bottom: 5px;
-	    padding-top: 5px
-	    border-bottom: 3px solid #${base0C};
-	    /* color: #${white}; */
+	    padding-top: 5px;
+	    background: transparent;
 	    transition-property: background-color;
 	    transition-duration: .5s;
 	}
 	
+	#window {
+	    margin-top: 6px;
+	}
 	#workspaces {
-	margin-left: 8px;
+	background:#${bar};
+	margin-top: 6px;
+	margin-left: 12px;
 	font-size: 4px;
 	margin-bottom: 0px;
 	border-radius: 10px;
@@ -44,7 +49,7 @@ in
 	    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 	}
 	#workspaces button:hover {
-	    background: #${base08};
+	    background: transparent;
 	    padding-left: 3px;
 	    padding-right: 3px;
 	    padding-top : 1px;
@@ -53,10 +58,11 @@ in
 	    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 	}
 	#workspaces button.active {
-	    background: #${base0D};
+	    background: transparent;
 	    margin-left: 9px;
 	    padding-left: 12px;
 	    padding-right: 12px;
+	    color: #${base0D};
 	    padding-bottom: 0px;
 	    padding-top: 0px;
 	    margin-right: 3px;
@@ -64,57 +70,73 @@ in
 	    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 	}
 	#custom-launcher{
-	    font-size: 17px;
-	    color: #${base0C};
-	    padding-left: 10px;
-	    padding-right: 8px;
-	    margin-left: 8px;
-	    border-radius: 10px;
+	    background: #${bar};
+	    color: #${white};
+	    font-size: 24px;
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 5px;
+	border-radius: 10px;
+	transition: none;
 	}
     #clock {
-	padding-left: 16px;
-	padding-right: 16px;
+	margin-top: 6px;
 	margin-left: 8px;
-	margin-right: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
 	transition: none;
+	background: #${bar};
 	color: #${white};
+
 }
 #tray {
-	padding-left: 16px;
-	padding-right: 16px;
+	margin-top: 6px;
 	margin-left: 8px;
-	margin-right: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
 	transition: none;
+	background: #${bar};
 	color: #${white};
 }	
 
 #memory {
+	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
 	border-radius: 10px;
+	background: #${bar};
 	transition: none;
 	color: #${white};
 }
 #cpu {
+	margin-top: 6px;
 	margin-left: 8px;
 	padding-left: 10px;
 	margin-bottom: 0px;
 	padding-right: 10px;
 	border-radius: 10px;
 	transition: none;
+	background: #${bar};
 	color: #${white};
 }
 
     #pulseaudio{
-	margin-left: 0px;
-	padding-left: 2px;
-	margin-bottom: 0px;
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
 	padding-right: 10px;
+	margin-bottom: 0px;
 	border-radius: 10px;
 	transition: none;
 	color: #${white};
+	background: #${bar};
 
     }	
 	   '';

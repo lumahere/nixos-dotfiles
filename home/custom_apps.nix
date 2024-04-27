@@ -1,6 +1,6 @@
 {pkgs, config, ...}:
 {
-home.packages = {
+home.packages = [
  #fill with your desired packages
-}
+];
 }
